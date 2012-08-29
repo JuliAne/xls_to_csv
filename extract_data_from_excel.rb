@@ -51,7 +51,7 @@ require 'spreadsheet'
 count = 1  
 
 # generates a new xls file with number 420 for nil objects in condition into folder "output_xls_after_parsing_for_nil_objects"
-# if you don't need this comment the next 15 lines (upto "Spreadsheet end")
+# if you don't need this comment the next 17 lines (upto "Spreadsheet end")
 Spreadsheet.open(@sheet_name) do |book| #open spreadsheet
   while count < 7 do #loop for six runs  
     book.worksheet(@worksheet_name).each do |row| #select a specified worksheet from the above named spreadsheet
