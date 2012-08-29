@@ -98,7 +98,7 @@ Spreadsheet.open(@sheet_name) do |book| #do you remember?
   	    			file_control_e.write e
          		end #end for
          	file_control_e.close
-	elsif row[2] == "drop" && row[0] == count
+	elsif (row[2] == "drop" || row[2].nil?) && row[0] == count #if condition is "drop" or cell is empty (nil object)
 		(@drop_c[count] ||= []) << ["#{row[8]},"]
 		file_drop_c = File.new("xls_to_csv/drop_c_#{count}.csv", "w+")
 	 	#print "DROP_C #{@drop_c[count]}\n" 
